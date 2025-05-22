@@ -24,14 +24,14 @@ int main() {
         fprintf(stderr, "Failed to load program\n");
         return 1;
     }
-    print_instruction_memory(&imem, 0, 10);
+    print_instruction_memory(&imem, 0, 30);
     printf("=== Data Memory BEFORE Execution ===\n");
     print_data_memory();
     
     printf("=== Starting Pipelined Execution ===\n");
     
     // Use pipelined processor
-    run_pipelined_processor(&imem, 0, 10);
+    run_pipelined_processor(&imem, 0, 30);
     
     return 0;
 }
